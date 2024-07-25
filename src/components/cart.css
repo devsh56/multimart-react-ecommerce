@@ -1,0 +1,138 @@
+/* CSS for Cart Component */
+
+/* Container styling */
+.cartContainer {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    
+  }
+  
+  /* Title styling */
+  .cartTitle {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Base styles for items */
+  .itemContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 90px;
+    margin-left: 40px;
+    
+  }
+  
+  .itemIterator {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-right: 60px;
+  }
+  /* CSS for Heading */
+
+.Heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333; /* Dark gray color */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow */
+  }
+  
+  .itemIterator:hover {
+    transform: translateY(-5px);
+  }
+
+  /* CSS for Cart Item */
+
+/* Image styling */
+.itemImg {
+    display: block;
+    margin: 0 auto; /* Center the image */
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 5px;
+  }
+  
+  /* Item name styling */
+  .itemName {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  /* Item description styling */
+  .itemDesc {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Item price styling */
+  .itemPrice {
+    font-size: 16px;
+    font-weight: bold;
+    color: #00aaff; /* Blue color */
+    margin-top: 5px;
+  }
+  
+  
+  /* Animation for adding/removing items */
+  @keyframes itemAdded {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes itemRemoved {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Apply animation to specific elements */
+  .itemAdded {
+    animation: itemAdded 0.5s ease-in-out;
+  }
+  
+  .itemRemoved {
+    animation: itemRemoved 0.5s ease-in-out;
+  }
+  /* cart.css */
+.deleteButton {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #cc0000;
+}

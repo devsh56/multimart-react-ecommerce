@@ -1,15 +1,21 @@
-import { lazy, Suspense } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
-import Loader from "./components/Loader/Loader";
+import { lazy, Suspense } from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Cart from "./components/Cart";
+import Dashboard from "./components/Dashboard";
+import Footer from "./components/Footer/Footer";
+import Loader from "./components/Loader/Loader";
+import Login from "./components/Login";
+import NavBar from "./components/Navbar/Navbar";
+import New from "./components/Product/New";
+import Product from "./components/Product/Product";
+import Update from "./components/Product/Update";
+import View from "./components/Product/View";
+import Register from "./components/Register";
 const Home = lazy(() => import("./pages/Home"));
-const Shop = lazy(() => import("./pages/Shop"));
-const Cart = lazy(() => import("./pages/Cart"));
-const Product = lazy(() => import("./pages/Product"));
+
 function App() {
   return (
     <Suspense fallback={<Loader />}>
@@ -27,10 +33,15 @@ function App() {
         />
         <NavBar />
         <Routes>
+        <Route path="/product/new" element={<New />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/product/view/:id" element={<View />} />
+        <Route path="/product/update/:id" element={<Update />} />
+        <Route path="/shop" element={<Product />} />
+        <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/shop/:id" element={<Product />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
         <Footer />
       </Router>

@@ -1,0 +1,82 @@
+/* CSS for New component form */
+
+.AddNew {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Heading {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the form fields horizontally */
+}
+
+.inputField,
+.imageUpload,
+.priceInput,
+.currency {
+  margin-left: 100px;
+  margin-bottom: 20px;
+  width: 100%; /* Make input fields take full width of container */
+}
+
+label {
+  font-weight: bold;
+  align-self: flex-start; /* Align labels to the start (left) */
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  margin-left: 80px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Animation for form elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inputField,
+.imageUpload,
+.priceInput,
+.currency,
+button[type="submit"] {
+  animation: fadeIn 0.5s ease;
+}

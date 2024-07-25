@@ -1,0 +1,42 @@
+.update-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .update-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .update-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .update-container input, .update-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .update-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .update-container button:hover {
+    background-color: #45a049;
+  }
+
+
+  

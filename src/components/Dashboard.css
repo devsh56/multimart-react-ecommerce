@@ -1,0 +1,82 @@
+.dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-title {
+    text-align: center;
+    color: #333;
+  }
+  
+  .dashboard-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .dashboard-section:hover {
+    transform: translateY(-5px);
+  }
+  
+  .dashboard-section h2 {
+    color: #333;
+  }
+  
+  .dashboard-section p {
+    color: #666;
+  }
+  
+  /* Animation for the bar and pie charts */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .chart-container {
+    margin-top: 20px;
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  .dashboard-section {
+    margin-bottom: 20px;
+  }
+  
+  canvas {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    height: auto;
+    animation: fadeIn 2s; /* Example animation */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .dashboard-section {
+    margin-bottom: 20px;
+    text-align: center; /* Center align the content */
+  }
+  
+  canvas {
+    display: inline-block; /* Make canvas elements inline-block */
+    margin: 0 auto; /* Center align the canvas horizontally */
+  }
+  
+  
